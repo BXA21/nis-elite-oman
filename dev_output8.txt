@@ -1,0 +1,55 @@
+﻿
+> nis-elite@0.1.0 dev
+> next dev -p 3009
+
+node.exe : ΓÜá Warning: 
+Next.js inferred your 
+workspace root, but it may 
+not be correct.
+At C:\Program 
+Files\nodejs\npm.ps1:29 char:3
++   & $NODE_EXE $NPM_CLI_JS 
+$args
++   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : 
+    NotSpecified: (ΓÜá Warni  
+  ng: Ne...not be correct.:   
+ String) [], RemoteExcepti    
+on
+    + FullyQualifiedErrorId : 
+    NativeCommandError
+ 
+ We detected multiple 
+lockfiles and selected the 
+directory of C:\Users\Asus 
+Tuf Gaming\package-lock.json 
+as the root directory.
+ To silence this warning, set 
+`turbopack.root` in your 
+Next.js config, or consider 
+removing one of the lockfiles 
+if it's not needed.
+   See https://nextjs.org/docs
+/app/api-reference/config/next
+-config-js/turbopack#root-dire
+ctory for more information.
+ Detected additional 
+lockfiles: 
+   * C:\Users\Asus Tuf 
+Gaming\thani final year 
+project\package-lock.json
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3009
+- Network:       http://192.168.100.3:3009
+
+Γ£ô Starting...
+Γ¿» Unable to acquire lock at 
+C:\Users\Asus Tuf 
+Gaming\thani final year 
+project\.next\dev\lock, is 
+another instance of next dev 
+running?
+  Suggestion: If you intended to restart next dev, terminate the other process, and then try again.
+[?25h

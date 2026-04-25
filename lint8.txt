@@ -1,0 +1,103 @@
+﻿
+> nis-elite@0.1.0 lint
+> eslint
+
+
+C:\Users\Asus Tuf Gaming\thani final year project\src\app\compare\page.tsx
+   9:10  warning  'Card' is defined but never used          @typescript-eslint/no-unused-vars
+   9:16  warning  'CardContent' is defined but never used   @typescript-eslint/no-unused-vars
+  10:10  warning  'Tabs' is defined but never used          @typescript-eslint/no-unused-vars
+  10:16  warning  'TabsContent' is defined but never used   @typescript-eslint/no-unused-vars
+  10:29  warning  'TabsList' is defined but never used      @typescript-eslint/no-unused-vars
+  10:39  warning  'TabsTrigger' is defined but never used   @typescript-eslint/no-unused-vars
+  49:42  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  49:50  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  55:55  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  55:63  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\Asus Tuf Gaming\thani final year project\src\app\favorites\page.tsx
+   9:41  warning  'CardHeader' is defined but never used                           @typescript-eslint/no-unused-vars
+  43:94  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Asus Tuf Gaming\thani final year project\src\app\models\[year]\page.tsx
+  216:27  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\Asus Tuf Gaming\thani final year project\src\app\models\page.tsx
+    6:32  warning  'Search' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           @typescript-eslint/no-unused-vars
+    6:60  warning  'Zap' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+   11:41  warning  'CardHeader' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   23:20  warning  'setSearch' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               @typescript-eslint/no-unused-vars
+  102:34  error    Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+C:\Users\Asus Tuf Gaming\thani final year project\src\app\models\page.tsx:102:34
+  100 |                             </SheetHeader>
+  101 |                             <div className="mt-8">
+> 102 |                                 <FilterSidebar />
+      |                                  ^^^^^^^^^^^^^ This component is created during render
+  103 |                             </div>
+  104 |                         </SheetContent>
+  105 |                     </Sheet>
+
+C:\Users\Asus Tuf Gaming\thani final year project\src\app\models\page.tsx:31:27
+  29 |     );
+  30 |
+> 31 |     const FilterSidebar = () => (
+     |                           ^^^^^^^
+> 32 |         <div className="space-y-8">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 33 |             <div>
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 77 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 78 |     );
+     | ^^^^^^ The component is created during render here
+  79 |
+  80 |     return (
+  81 |         <div className="container mx-auto px-4 py-8">  react-hooks/static-components
+  113:26  error    Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+C:\Users\Asus Tuf Gaming\thani final year project\src\app\models\page.tsx:113:26
+  111 |                 <aside className="hidden md:block col-span-1 border-r pr-8">
+  112 |                     <div className="sticky top-24">
+> 113 |                         <FilterSidebar />
+      |                          ^^^^^^^^^^^^^ This component is created during render
+  114 |                     </div>
+  115 |                 </aside>
+  116 |
+
+C:\Users\Asus Tuf Gaming\thani final year project\src\app\models\page.tsx:31:27
+  29 |     );
+  30 |
+> 31 |     const FilterSidebar = () => (
+     |                           ^^^^^^^
+> 32 |         <div className="space-y-8">
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 33 |             <div>
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 77 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 78 |     );
+     | ^^^^^^ The component is created during render here
+  79 |
+  80 |     return (
+  81 |         <div className="container mx-auto px-4 py-8">                                   react-hooks/static-components
+
+C:\Users\Asus Tuf Gaming\thani final year project\src\app\page.tsx
+    4:27  warning  'CheckCircle2' is defined but never used                         @typescript-eslint/no-unused-vars
+   86:97  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  100:31  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  105:27  error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+
+C:\Users\Asus Tuf Gaming\thani final year project\src\app\quiz\page.tsx
+    8:10  warning  'Slider' is defined but never used  @typescript-eslint/no-unused-vars
+    9:10  warning  'Car' is defined but never used     @typescript-eslint/no-unused-vars
+  122:34  error    'Badge' is not defined              react/jsx-no-undef
+
+Γ£û 26 problems (12 errors, 14 warnings)
+

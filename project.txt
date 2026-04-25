@@ -1,0 +1,55 @@
+# NisElite Project Overview
+
+## Project Overview and Requirements
+NisElite is a premium, modern e-commerce-style web application designed exclusively for comparing Nissan Altima model years 2015–2025. The platform aims to resolve user confusion regarding varying specs and trims across different model years by providing a fast, transparent, and user-friendly interface for browsing, comparing, and discovering the ideal Altima model based on individual preferences.
+
+### Key Requirements:
+- **Style**: Clean, modern, automotive-premium aesthetics (soft shadows, crisp cards, strong typography, bento grids).
+- **Functionality**:
+  - Browse/filter models by year, engine, trim, and priorities.
+  - Detailed model year pages (Performance, Safety, Technology, Trim differences).
+  - Robust comparison tool (Quick/Deep compare, Year vs. Year, Trim vs. Trim).
+  - Favorites/Wishlist system.
+  - Recommendation Quiz (preference-based suggestions).
+- **Responsive Design**: Mobile-first approach with optimized layouts for desktop (12-column grid) and mobile (bottom sheet filters, sticky compare).
+
+## Tech Stack
+- **Frontend**: Next.js (App Router), React, TypeScript
+- **Styling**: Tailwind CSS, Vanilla CSS for micro-animations
+- **Component Library**: Shadcn/UI, Radix UI (for accessible primitives)
+- **Animation**: Framer Motion (for subtle micro-interactions like add-to-compare and sticky traits)
+- **State Management**: Zustand or React Context (for managing Favorites and Compare tray)
+- **Icons**: Lucide React
+
+*Justification*: This stack provides a highly performant, accessible, and easily styled foundation that perfectly aligns with building a premium, modern UI. Next.js ensures fast load times and SEO optimization, while Tailwind CSS combined with Shadcn/UI accelerates the creation of a reusable, auto-layout structured Design System (UI Kit) that matches the premium aesthetic requirements.
+
+## Architecture Description
+The application will follow a modular, component-driven architecture:
+- `components/ui/`: Reusable, atomic design system components (buttons, chips, badges, sliders).
+- `components/features/`: Complex, feature-specific components (Model Card, Comparison Table, Filter Sidebar).
+- `app/`: Next.js page routes (Landing, Browse, Detail, Compare, Favorites, Quiz).
+- `data/`: Mock data and placeholders for realistic rendering since no live API is integrated yet.
+- `store/`: Local state management for Favorites (Wishlist) and the Compare tray.
+
+## Implementation Plan & Key Features
+1. **Phase 1: Project Setup & Design System (UI Kit)**
+   - Initialize Next.js project with Tailwind CSS and Shadcn/UI.
+   - Define typography scale, color palette (premium/automotive), and shadow tokens.
+   - Build core UI components: Buttons, inputs, chips, sliders, badges, empty states, and loading skeletons.
+2. **Phase 2: Core Layouts & Marketing**
+   - Implement Landing Page with Hero, Value Cards, and Trust Badges.
+   - Build Catalog/Browse page with product grid and responsive filters.
+3. **Phase 3: Core App Experience**
+   - Develop the Model Year Detail Page (tabbed sections, trim matrices).
+   - Implement the interactive Compare Page (Quick/Deep modes, "Only differences" toggle).
+   - Build the Favorites (Wishlist) page with categorization.
+4. **Phase 4: Recommendation Engine & Polish**
+   - Create the 5-7 step Recommendation Quiz wizard.
+   - Polish micro-interactions, hover states, and responsive behavior.
+   - Final accessibility and performance review.
+
+## Timeline and Milestones
+- **Milestone 1**: UI Kit & Design System setup (Days 1-2)
+- **Milestone 2**: Landing & Browse Pages finalized (Days 3-4)
+- **Milestone 3**: Detail & Compare Features ready (Days 5-7)
+- **Milestone 4**: Favorites, Quiz, and Final Polish (Days 8-10)

@@ -1,0 +1,125 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #1A1A1A;
+  --card: #ffffff;
+  --card-foreground: #1A1A1A;
+  --popover: #ffffff;
+  --popover-foreground: #1A1A1A;
+  --primary: #95A069; /* Olive Green from image */
+  --primary-foreground: #ffffff;
+  --secondary: #BBE1D9; /* Mint from image */
+  --secondary-foreground: #1A1A1A;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #FFA38A; /* Peach/Orange from image */
+  --accent-foreground: #1A1A1A;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #95A069;
+  --radius: 0.625rem;
+  
+  --automotive-silver: oklch(0.88 0.01 240);
+  --automotive-dark: oklch(0.15 0.02 240);
+  --nissan-red: #c31b31;
+}
+
+.dark {
+  --background: #1A1A1A;
+  --foreground: #ffffff;
+  --card: #222222;
+  --card-foreground: #ffffff;
+  --popover: #222222;
+  --popover-foreground: #ffffff;
+  --primary: #95A069;
+  --primary-foreground: #ffffff;
+  --secondary: #1F2937;
+  --secondary-foreground: #ffffff;
+  --muted: #333333;
+  --muted-foreground: #9ca3af;
+  --accent: #FFA38A;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: #333333;
+  --input: #333333;
+  --ring: #95A069;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-brand-red: var(--nissan-red);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground tracking-tight selection:bg-primary/20;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tighter;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Background gradient matching the image */
+.bg-nissan-gradient {
+  background: linear-gradient(135deg, #BBE1D9 0%, #BBE1D9 33%, #95A069 33%, #95A069 66%, #FFA38A 66%, #FFA38A 100%);
+}
+.bg-nissan-diagonal {
+  background: 
+    linear-gradient(to bottom right, 
+      transparent 0%, 
+      transparent 50%, 
+      #95A069 50%, 
+      #95A069 100%),
+    linear-gradient(to top right,
+      #FFA38A 0%,
+      #FFA38A 50%,
+      #BBE1D9 50%,
+      #BBE1D9 100%);
+}
+.bg-nissan-split {
+  background: linear-gradient(135deg, #BBE1D9 30%, #95A069 30%, #95A069 70%, #FFA38A 70%);
+}
+
+.glass {
+  @apply bg-background/80 backdrop-blur-md border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)];
+}
+.glass-card {
+  @apply bg-card/60 backdrop-blur-xl border border-white/5 shadow-xl;
+}

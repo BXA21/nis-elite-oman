@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 80" width="100%" height="100%">
+  <!-- Circular arc ring (left bottom + right top) -->
+  <!-- Top-right arc -->
+  <path d="M 52,18 A 30,30 0 0,1 82,48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <!-- Bottom-left arc -->
+  <path d="M 82,48 A 30,30 0 0,1 52,78" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Piston (top-right of arc) -->
+  <g transform="translate(82, 15)">
+    <!-- Rod joint -->
+    <circle cx="0" cy="3" r="4" fill="currentColor"/>
+    <!-- Rod -->
+    <rect x="0" y="1" width="10" height="4" fill="currentColor"/>
+    <!-- Piston body -->
+    <rect x="10" y="-4" width="10" height="14" fill="none" stroke="currentColor" stroke-width="2"/>
+    <!-- Piston rings -->
+    <line x1="16" y1="-4" x2="16" y2="10" stroke="currentColor" stroke-width="1.5"/>
+    <line x1="13" y1="-4" x2="13" y2="10" stroke="currentColor" stroke-width="1.5"/>
+  </g>
+
+  <!-- Wrench (bottom-left of arc) -->
+  <g transform="translate(52, 78)">
+    <!-- Rod to arc -->
+    <rect x="-10" y="-2" width="10" height="4" fill="currentColor"/>
+    <!-- Wrench head -->
+    <path d="M -10,-5 C -20,-12 -34,-8 -34,0 C -34,8 -20,12 -10,5 Z" fill="none" stroke="#E8856A" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M -34,-3 L -20,-3 L -20,3 L -34,3" fill="none" stroke="#E8856A" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- NISSAN text -->
+  <text x="110" y="44" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-weight="900" font-size="32" fill="currentColor" letter-spacing="3">NISSAN</text>
+
+  <!-- Genuine parts text -->
+  <text x="110" y="62" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-weight="600" font-size="13" fill="currentColor" letter-spacing="1.5" opacity="0.75">Genuine Parts</text>
+</svg>
