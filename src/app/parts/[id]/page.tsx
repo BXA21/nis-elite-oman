@@ -12,6 +12,14 @@ import { Separator } from '@/components/ui/separator';
 import { ChevronRight, ArrowLeft, Star, StarHalf, Truck, ShieldCheck, ShoppingCart, Lock } from 'lucide-react';
 import { toast } from 'sonner';
 
+export function generateStaticParams() {
+    return [
+        { id: 'part-1' }, { id: 'part-2' }, { id: 'part-3' }, { id: 'part-4' },
+        { id: 'part-5' }, { id: 'part-6' }, { id: 'part-7' }, { id: 'part-8' },
+        { id: 'part-9' }, { id: 'part-10' }, { id: 'part-11' }, { id: 'part-12' }
+    ];
+}
+
 export default function PartDetailPage({ params }: { params: Promise<{ id: string }> }) {
     const unwrappedParams = use(params);
     const { products } = useProducts();
@@ -87,6 +95,22 @@ export default function PartDetailPage({ params }: { params: Promise<{ id: strin
 
                     <Separator className="my-6 bg-border/50" />
 
+                    {(part.condition || part.orderFromChina) && (
+                        <div className="flex flex-col gap-3 mb-6">
+                            {part.condition && (
+                                <Badge variant="outline" className="w-fit bg-secondary/20 uppercase tracking-wider text-xs px-3 py-1 border-primary/20">
+                                    Condition: {part.condition}
+                                </Badge>
+                            )}
+                            {part.orderFromChina && (
+                                <div className="text-sm font-medium text-amber-600 dark:text-amber-500 bg-amber-500/10 p-3 rounded-xl border border-amber-500/20 flex items-center gap-3 shadow-sm">
+                                    <span className="text-2xl">🌍</span>
+                                    <p><strong>Available by order from China</strong><br/><span className="opacity-80">This is a lower price option. Please allow extra time for international shipping.</span></p>
+                                </div>
+                            )}
+                        </div>
+                    )}
+
                     <div className="mb-8">
                         <div className="flex items-end gap-3 mb-2">
                             <span className="text-sm text-red-500 font-bold mb-1">-16%</span>
@@ -102,7 +126,7 @@ export default function PartDetailPage({ params }: { params: Promise<{ id: strin
                         <ul className="space-y-3">
                             <li className="flex items-start gap-3">
                                 <ChevronRight className="h-5 w-5 text-primary shrink-0" />
-                                <span className="text-muted-foreground"><strong className="text-foreground">Direct Fit:</strong> Designed exclusively for Nissan Altima ({part.compatibleYears[0]}-{part.compatibleYears[1]}).</span>
+                                <span className="text-muted-foreground"><strong className="text-foreground">Compatible with Nissan Altima {part.compatibleYears[0]}–{part.compatibleYears[1]}</strong>. Direct fit replacement.</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <ChevronRight className="h-5 w-5 text-primary shrink-0" />

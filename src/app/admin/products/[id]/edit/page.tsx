@@ -16,6 +16,14 @@ const CATEGORIES = [
   'Exterior', 'Interior', 'Lighting', 'Electronics', 'Filters'
 ];
 
+export function generateStaticParams() {
+    return [
+        { id: 'part-1' }, { id: 'part-2' }, { id: 'part-3' }, { id: 'part-4' },
+        { id: 'part-5' }, { id: 'part-6' }, { id: 'part-7' }, { id: 'part-8' },
+        { id: 'part-9' }, { id: 'part-10' }, { id: 'part-11' }, { id: 'part-12' }
+    ];
+}
+
 export default function EditProductPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
   const router = useRouter();

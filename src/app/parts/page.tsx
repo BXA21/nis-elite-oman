@@ -14,14 +14,8 @@ import { toast } from 'sonner';
 
 const CATEGORIES = [
     'All',
-    'Engine & Drivetrain',
-    'Brakes',
-    'Suspension & Steering',
-    'Exterior',
-    'Interior',
-    'Lighting',
-    'Electronics',
-    'Filters',
+    'Mechanical / Engine Parts',
+    'Interior / Car Accessories and Parts',
 ];
 
 const NISSAN_MODELS = [
@@ -180,9 +174,20 @@ export default function PartsStorePage() {
                                             {renderStars(part.rating)}
                                             <span className="text-xs text-muted-foreground">({part.reviews})</span>
                                         </div>
+                                        
+                                        {part.condition && (
+                                            <Badge variant="outline" className="mb-2 w-fit text-[10px] uppercase bg-secondary/20">
+                                                {part.condition}
+                                            </Badge>
+                                        )}
+                                        {part.orderFromChina && (
+                                            <p className="text-xs font-medium text-amber-600 dark:text-amber-500 mb-3 bg-amber-500/10 p-1.5 rounded border border-amber-500/20">
+                                                ⚠️ Available by order from China – lower price option.
+                                            </p>
+                                        )}
 
-                                        <p className="text-xs text-muted-foreground mt-auto line-clamp-2 mt-4">
-                                            Fits Altima • {part.compatibleYears[0]}-{part.compatibleYears[1]}
+                                        <p className="text-xs font-medium text-primary mt-auto line-clamp-2 mt-4">
+                                            Fits Nissan Altima {part.compatibleYears[0]}–{part.compatibleYears[1]}
                                         </p>
                                     </CardContent>
 

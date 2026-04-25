@@ -40,7 +40,7 @@ export const useProducts = create<ProductState>()(
       },
     }),
     {
-      name: 'niselite-products',
+      name: 'niselite-products-v3',
     }
   )
 );
