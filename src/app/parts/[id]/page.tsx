@@ -1,6 +1,5 @@
 'use client';
 
-import { use } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
@@ -12,18 +11,11 @@ import { Separator } from '@/components/ui/separator';
 import { ChevronRight, ArrowLeft, Star, StarHalf, Truck, ShieldCheck, ShoppingCart, Lock } from 'lucide-react';
 import { toast } from 'sonner';
 
-export function generateStaticParams() {
-    return [
-        { id: 'part-1' }, { id: 'part-2' }, { id: 'part-3' }, { id: 'part-4' },
-        { id: 'part-5' }, { id: 'part-6' }, { id: 'part-7' }, { id: 'part-8' },
-        { id: 'part-9' }, { id: 'part-10' }, { id: 'part-11' }, { id: 'part-12' }
-    ];
-}
 
-export default function PartDetailPage({ params }: { params: Promise<{ id: string }> }) {
-    const unwrappedParams = use(params);
+export default function PartDetailPage({ params }: { params: { id: string } }) {
+    const { id } = params;
     const { products } = useProducts();
-    const part = products.find(p => p.id === unwrappedParams.id);
+    const part = products.find(p => p.id === id);
     const addToCart = useCart((state) => state.addToCart);
 
     if (!part) {

@@ -1,6 +1,6 @@
 'use client';
 
-import { use } from 'react';
+
 import Image from 'next/image';
 import { Heart, Scale, ShieldCheck, Zap, Gauge, Map, ArrowRight } from 'lucide-react';
 import { ALTIMA_MODELS } from '@/data/models';
@@ -11,17 +11,8 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
-export function generateStaticParams() {
-    return [
-        { year: '2015-2018' },
-        { year: '2019-2022' },
-        { year: '2023-2025' }
-    ];
-}
-
-export default function ModelDetailPage({ params }: { params: Promise<{ year: string }> }) {
-    const unwrappedParams = use(params);
-    const { year: modelId } = unwrappedParams;
+export default function ModelDetailPage({ params }: { params: { year: string } }) {
+    const { year: modelId } = params;
     const model = ALTIMA_MODELS.find(m => m.id === modelId);
 
     const { favorites, toggleFavorite } = useFavorites();
