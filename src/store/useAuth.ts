@@ -65,8 +65,8 @@ const DEFAULT_USERS: User[] = [
   },
   {
     id: 'customer-001',
-    name: 'Ahmed Al-Balushi',
-    email: 'ahmed@example.com',
+    name: 'Mohammed Al-Namanii',
+    email: 'Mohammed@gmail.com',
     password: 'password123',
     role: 'customer',
     createdAt: new Date().toISOString(),

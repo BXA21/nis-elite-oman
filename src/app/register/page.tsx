@@ -76,7 +76,7 @@ export default function RegisterPage() {
                 <Input
                   id="reg-name"
                   type="text"
-                  placeholder="e.g. Ahmed Al-Balushi"
+                  placeholder="e.g. Mohammed Al-Namanii"
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   className={fieldErrors.name ? 'border-destructive' : ''}

@@ -108,7 +108,7 @@ export default function CheckoutPage() {
                       id="co-name"
                       value={form.name}
                       onChange={e => setForm({ ...form, name: e.target.value })}
-                      placeholder="Ahmed Al-Balushi"
+                      placeholder="Mohammed Al-Namanii"
                       className={errors.name ? 'border-destructive' : ''}
                     />
                     {errors.name && <p className="text-xs text-destructive mt-1">{errors.name}</p>}
