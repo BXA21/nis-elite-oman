@@ -68,7 +68,7 @@ export default function LoginPage() {
             {/* Demo accounts info */}
             <div className="mb-6 p-4 bg-primary/5 border border-primary/20 rounded-xl text-xs text-muted-foreground space-y-1">
               <p className="font-semibold text-foreground mb-2">Demo Accounts:</p>
-              <p>👤 Customer: <span className="font-mono">ahmed@example.com</span> / <span className="font-mono">password123</span></p>
+              <p>👤 Customer: <span className="font-mono">Mohammed@gmail.com</span> / <span className="font-mono">password123</span></p>
               <p>🔧 Admin: <span className="font-mono">admin@niselite.com</span> / <span className="font-mono">admin123</span></p>
             </div>
 
